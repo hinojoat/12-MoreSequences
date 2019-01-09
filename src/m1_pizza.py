@@ -7,8 +7,8 @@ This module lets you practice:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Alex Hinojosa.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 import math
@@ -40,7 +40,7 @@ def main():
 def run_test_generate_points_on_circle():
     """ Tests the   generate_points_on_circle   function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  generate_points_on_circle  function defined below.
     #   Include at least ** 1 ** ADDITIONAL test (that YOU write).
     #
@@ -71,6 +71,16 @@ def run_test_generate_points_on_circle():
     # Test 2:  (YOU write THIS test)
     # -------------------------------------------------------------------------
 
+    expected = [rg.Point(225.0, 40.0),
+                rg.Point(212.5, 61.7),
+                rg.Point(187.5, 61.7),
+                rg.Point(175.0, 40.0),
+                rg.Point(187.5, 18.3),
+                rg.Point(212.5, 18.3)]
+    circle = rg.Circle(rg.Point(200, 40), 25)
+    answer = generate_points_on_circle(circle, 6)
+    print('Expected:', expected)
+    print('Actual:  ', answer)
 
 def generate_points_on_circle(circle_for_points, number_of_points_to_generate):
     """
